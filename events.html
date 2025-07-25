@@ -1,0 +1,189 @@
+<!-- events.html (Event Listing Grid) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ding-Dong - Events</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"><span style="color:#7bb661;">ding</span><span
+          style="color:#222;">dong</span></a>
+      <ul class="navbar-nav me-auto ms-3">
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+
+      </ul>
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="my-tickets.html">My Tickets</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Sign In</a></li>
+        <li class="nav-item">
+          <img src="img/Arjith sing.jpg" alt="Profile" class="rounded-circle d-inline-block"
+            style="width:32px;height:32px;object-fit:cover;border:2px solid #7bb661;">
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+    <section class="container py-5">
+      <h2 class="mb-4">Browse Events</h2>
+      <ul class="nav nav-tabs mb-4" id="eventTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="sports-tab" data-bs-toggle="tab" data-bs-target="#sports" type="button" role="tab" aria-controls="sports" aria-selected="true">Sports</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tech-tab" data-bs-toggle="tab" data-bs-target="#tech" type="button" role="tab" aria-controls="tech" aria-selected="false">Tech Events</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="theater-tab" data-bs-toggle="tab" data-bs-target="#theater" type="button" role="tab" aria-controls="theater" aria-selected="false">Theater</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="eventTabsContent">
+        <!-- Sports Tab -->
+        <div class="tab-pane fade show active" id="sports" role="tabpanel" aria-labelledby="sports-tab">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Example Sports Event -->
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img src="img/Arjith sing.jpg" class="card-img-top" alt="Football Match" style="height:220px;object-fit:cover;">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Football Match</h5>
+                  <p class="card-text">Exciting football match at the city stadium. Cheer for your favorite team!</p>
+                  <p class="card-text mb-1"><small class="text-muted">Date: 10 Dec • Wed • 16:00</small></p>
+                  <p class="card-text mb-2"><small class="text-muted">Venue: City Stadium, Paris</small></p>
+                  <span class="badge bg-primary mb-2 align-self-start" style="font-size:0.95rem;">Sports</span>
+                  <a href="event-detail.html" class="btn btn-outline-primary mt-auto">View Details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Add more sports events as needed -->
+          </div>
+        </div>
+        <!-- Tech Events Tab -->
+        <div class="tab-pane fade" id="tech" role="tabpanel" aria-labelledby="tech-tab">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img src="img/Facebook-_-1080x742-_-Tech-meetups.jpg" class="card-img-top" alt="Tech Meetup" style="height:220px;object-fit:cover;">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Tech Meetup</h5>
+                  <p class="card-text">Connect with tech enthusiasts and innovators. Join us for an evening of networking and knowledge sharing.</p>
+                  <p class="card-text mb-1"><small class="text-muted">Date: 05 Sep • Fri • 17:00</small></p>
+                  <p class="card-text mb-2"><small class="text-muted">Venue: Tech Hub, Silicon Valley</small></p>
+                  <span class="badge bg-danger mb-2 align-self-start" style="font-size:0.95rem;">High demand</span>
+                  <a href="event-detail.html" class="btn btn-outline-primary mt-auto">View Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img src="img/Virtual_Online_workshop_ideas_8af88d3e6e.jpg" class="card-img-top" alt="Workshop" style="height:220px;object-fit:cover;">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Creative Workshop</h5>
+                  <p class="card-text">Unleash your creativity in our hands-on session. Learn from industry experts and take home new skills.</p>
+                  <p class="card-text mb-1"><small class="text-muted">Date: 12 Oct • Sun • 14:00</small></p>
+                  <p class="card-text mb-2"><small class="text-muted">Venue: Art Center, New York</small></p>
+                  <span class="badge bg-warning text-dark mb-2 align-self-start" style="font-size:0.95rem;">Limited seats</span>
+                  <a href="event-detail.html" class="btn btn-outline-primary mt-auto">View Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img src="img/webinar-for-energy-automation-Siemens-digital-grid.jpg" class="card-img-top" alt="Tech Webinar" style="height:220px;object-fit:cover;">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Tech Webinar</h5>
+                  <p class="card-text">Stay ahead with insights from industry experts. Interactive Q&A and live demos included.</p>
+                  <p class="card-text mb-1"><small class="text-muted">Date: 20 Nov • Thu • 18:00</small></p>
+                  <p class="card-text mb-2"><small class="text-muted">Venue: Online</small></p>
+                  <span class="badge bg-info text-dark mb-2 align-self-start" style="font-size:0.95rem;">Online event</span>
+                  <a href="event-detail.html" class="btn btn-outline-primary mt-auto">View Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img src="img/Facebook-_-1080x742-_-Tech-meetups.jpg" class="card-img-top" alt="Startup Pitch" style="height:220px;object-fit:cover;">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Startup Pitch Night</h5>
+                  <p class="card-text">Watch startups pitch their ideas to investors. Network with founders and VCs.</p>
+                  <p class="card-text mb-1"><small class="text-muted">Date: 28 Nov • Fri • 19:00</small></p>
+                  <p class="card-text mb-2"><small class="text-muted">Venue: Innovation Hub, Berlin</small></p>
+                  <span class="badge bg-success mb-2 align-self-start" style="font-size:0.95rem;">Free entry</span>
+                  <a href="event-detail.html" class="btn btn-outline-primary mt-auto">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Theater Tab -->
+        <div class="tab-pane fade" id="theater" role="tabpanel" aria-labelledby="theater-tab">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img src="img/arijit_singh_48-orig1630504921.png" class="card-img-top" alt="Live Concert" style="height:220px;object-fit:cover;">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Live Concert</h5>
+                  <p class="card-text">Experience the thrill of live music with your favorite artists. This concert brings together talent from around the world for one unforgettable night.</p>
+                  <p class="card-text mb-1"><small class="text-muted">Date: 05 Sep • Fri • 17:00</small></p>
+                  <p class="card-text mb-2"><small class="text-muted">Venue: Tottenham Hotspur Stadium, London</small></p>
+                  <span class="badge bg-danger mb-2 align-self-start" style="font-size:0.95rem;">High demand</span>
+                  <a href="event-detail.html" class="btn btn-outline-primary mt-auto">View Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img src="img/Arjith sing.jpg" class="card-img-top" alt="Cultural Fest" style="height:220px;object-fit:cover;">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Cultural Fest</h5>
+                  <p class="card-text">A celebration of music, dance, and art from around the world. Fun for all ages!</p>
+                  <p class="card-text mb-1"><small class="text-muted">Date: 10 Dec • Wed • 16:00</small></p>
+                  <p class="card-text mb-2"><small class="text-muted">Venue: City Square, Paris</small></p>
+                  <span class="badge bg-primary mb-2 align-self-start" style="font-size:0.95rem;">Family event</span>
+                  <a href="event-detail.html" class="btn btn-outline-primary mt-auto">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </div>
+    </div>
+    <!-- More cards... -->
+    </div>
+    </section>
+
+
+
+
+
+
+    <!-- Minimalistic Footer -->
+    <footer style="background:#f8f9fa; border-top:1px solid #e0e0e0;">
+        <div class="container py-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <div class="small text-muted">&copy; 2025 dingdong GmbH</div>
+                <div class="d-flex flex-wrap gap-3 small">
+                    <a href="#" class="text-muted text-decoration-none">Company Details</a>
+                    <a href="#" class="text-muted text-decoration-none">Terms</a>
+                    <a href="#" class="text-muted text-decoration-none">Privacy</a>
+                    <a href="#" class="text-muted text-decoration-none">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

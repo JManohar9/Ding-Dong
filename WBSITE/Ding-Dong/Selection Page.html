@@ -1,0 +1,237 @@
+<!-- booking.html (Booking Form) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ding-Dong - Selection Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Ticket Quantity Selection Modal -->
+  <div class="modal fade" id="ticketSelectModal" tabindex="-1" aria-labelledby="ticketSelectModalLabel"
+    aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4">
+        <div class="modal-header border-0 pb-0">
+          <h4 class="modal-title w-100 text-center fw-bold" id="ticketSelectModalLabel">How many tickets?</h4>
+        </div>
+        <div class="modal-body pt-2">
+          <select class="form-select form-select-lg mb-4" id="ticketCountSelect">
+            <option value="1">1 ticket</option>
+            <option value="2" selected>2 tickets</option>
+            <option value="3">3 tickets</option>
+            <option value="4">4 tickets</option>
+            <option value="5">5 tickets</option>
+            <option value="6">6 tickets</option>
+          </select>
+          <div class="bg-light rounded-3 p-3 mb-4 d-flex align-items-start">
+            <span class="me-2" style="font-size:1.5rem; color:#388e3c;">
+              <i class="bi bi-people-fill"></i>
+            </span>
+            <div class="flex-grow-1">
+              <div class="d-flex align-items-center mb-1">
+                <span class="fw-bold me-2">We want to be seated together</span>
+                <div class="form-check form-switch m-0">
+                  <input class="form-check-input" type="checkbox" id="seatedTogetherSwitch" checked>
+                </div>
+              </div>
+              <small class="text-muted">We will find you the best available tickets based on your search
+                criteria</small>
+            </div>
+          </div>
+          <button class="btn btn-success w-100 fw-bold" id="continueBtn" style="font-size:1.1rem;">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><span style="color:#7bb661;">ding</span><span
+          style="color:#222;">dong</span></a>
+      <ul class="navbar-nav me-auto ms-3">
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+
+      </ul>
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="my-tickets.html">My Tickets</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Sign In</a></li>
+        <li class="nav-item">
+          <img src="https://i.scdn.co/image/ab6761610000e5eb5ba2d75eb08a2d672f9b69b7" alt="Profile" class="rounded-circle d-inline-block"
+            style="width:32px;height:32px;object-fit:cover;border:2px solid #7bb661;">
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="container py-5">
+    
+    <!-- Event Listing Row -->
+    <div class="container my-4">
+      <div class="d-flex align-items-start p-3 rounded-3 border bg-white flex-wrap">
+        <img src="https://i.scdn.co/image/ab6761610000e5eb5ba2d75eb08a2d672f9b69b7" alt="Arijit Singh Concert" class="rounded-2 me-3"
+          style="width:70px;height:70px;object-fit:cover;">
+        <div class="flex-grow-1">
+          <div class="d-flex align-items-center mb-1">
+            <h5 class="mb-0 fw-bold text-success">Arijit Singh</h5>
+            <span class="ms-3 text-secondary small">05 Sep • Fri • 17:00 • 2025</span>
+          </div>
+          <a href="#" class="d-block text-decoration-underline text-dark mb-1" style="font-size:1rem;">
+            Tottenham Hotspur Stadium, London, Greater London, United Kingdom
+          </a>
+          <span class="badge bg-light text-danger border border-danger mb-2" style="font-size:0.95rem;">
+            Only 2% of tickets left <i class="bi bi-info-circle ms-1"></i>
+          </span>
+        
+          <div class="text-muted small mb-2">
+            Under 16s must be accompanied by an adult over the age of 18. Over 5s Recommended. All ages need
+            a ticket. Age Restriction - No Under 3s
+          </div>
+          
+          <!-- <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-success rounded-pill px-3"><i class="bi bi-funnel"></i> Filters</button>
+            <button class="btn btn-outline-success rounded-pill px-3" id="ticketCountBtn"><span
+                id="ticketCountDisplay">2 tickets</span> <i class="bi bi-chevron-down"></i></button>
+            <button class="btn btn-outline-secondary rounded-pill px-3">₹9,607 – ₹55,435+ <i
+                class="bi bi-chevron-down"></i></button>
+            <button class="btn btn-outline-secondary rounded-pill px-3">Instant download</button>
+            <button class="btn btn-outline-secondary rounded-pill px-3">Perks <i
+                class="bi bi-chevron-down"></i></button>
+            <button class="btn btn-outline-secondary rounded-pill px-3">Front rows <i
+                class="bi bi-chevron-down"></i></button>
+            <button class="btn btn-outline-secondary rounded-pill px-3">Zones <i
+                class="bi bi-chevron-down"></i></button>
+          </div> -->
+        </div>
+        <div class="ms-auto d-flex align-items-start">
+          <div class="input-group" style="min-width: 250px;">
+            <span class="input-group-text bg-white border-0 pe-0"><i class="bi bi-search"></i></span>
+            <input type="search" class="form-control border-0" placeholder="Search events, artists, teams, and more"
+              style="background: #f8f9fa;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Book Your Seat</h2>
+    <!-- Stadium Seat Map and Ticket Listings -->
+    <div class="row g-4 mb-5">
+      <div class="col-lg-7">
+        <div class="bg-light rounded-4 p-3 d-flex flex-column align-items-center justify-content-center"
+          style="min-height:480px;">
+          <img src="./img/Screenshot-2020-09-10-at-11.06.36-1024x802.png" alt="Stadium Map" class="img-fluid"
+            style="max-width:100%;max-height:420px;">
+          <!-- Overlay seat prices and availability using absolutely positioned badges if needed -->
+        </div>
+        <!-- <div class="mt-3"> 
+          <div class="card bg-white border-0 shadow-sm p-3 mb-2" style="max-width:320px;">
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge bg-success me-2">Cheapest</span>
+              <span class="fw-bold">Section 523</span>
+              <span class="ms-auto fw-bold">INR9,925</span>
+            </div>
+            <div class="small text-muted mb-1">Row 28</div>
+            <div class="mb-1"><i class="bi bi-people-fill text-success"></i> 2 tickets together</div>
+            <div class="text-danger small mb-1"><i class="bi bi-exclamation-triangle"></i> Limited or restricted view</div>
+            <div class="text-danger small mb-1"><i class="bi bi-arrow-left-right"></i> Side or rear view</div>
+            <div class="text-danger small">2 tickets remaining in this listing on our site</div>
+            <div class="text-end text-muted small">each</div>
+          </div>
+          <div class="card bg-white border-0 shadow-sm p-3 mb-2" style="max-width:320px;">
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge bg-primary me-2">Best deal</span>
+              <span class="fw-bold">GA Standing</span>
+              <span class="ms-auto fw-bold">INR10,603</span>
+            </div>
+            <div class="small text-muted mb-1">2 tickets</div>
+            <div class="mb-1"><i class="bi bi-eye"></i> Clear view</div>
+            <div class="mb-1"><i class="bi bi-person-x"></i> No under 14s</div>
+            <div class="mb-1"><i class="bi bi-person-standing"></i> Standing only</div>
+            <span class="badge bg-danger">Bestselling</span>
+            <div class="text-end text-muted small">each</div>
+          </div>
+        </div>
+        <div class="mt-3">
+          <div class="card bg-light border-0 p-2 small" style="max-width:200px;">
+            <div class="d-flex align-items-center mb-1"><span class="badge bg-danger me-2">Bestselling</span> <span>Legend</span></div>
+            <div class="d-flex align-items-center"><span class="badge bg-success me-2">Cheapest</span> <span>Legend</span></div>
+          </div>
+        </div> -->
+      </div>
+      <div class="col-lg-5">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <span class="fw-bold">4 listings</span>
+          <span class="text-muted small"><i class="bi bi-arrow-down-up"></i> Sort by recommended</span>
+        </div>
+        <div class="card bg-white border-0 shadow-sm p-3 mb-3">
+          <div class="d-flex align-items-center mb-2">
+            <span class="badge bg-success me-2">Cheapest</span>
+            <span class="fw-bold">Section 523</span>
+            <span class="ms-auto fw-bold">INR9,925</span>
+          </div>
+          <div class="small text-muted mb-1">Row 28</div>
+          <div class="mb-1"><i class="bi bi-people-fill text-success"></i> <span class="listing-ticket-count">2 tickets
+              together</span></div>
+          <div class="text-danger small mb-1"><i class="bi bi-exclamation-triangle"></i> Limited or restricted view
+          </div>
+          <div class="text-danger small mb-1"><i class="bi bi-arrow-left-right"></i> Side or rear view</div>
+          <div class="text-danger small">2 tickets remaining in this listing on our site</div>
+          <a href="Seat Selection.html" class="btn btn-danger w-100 fw-bold mb-2">Select Seats</a>
+
+          <div class="text-end text-muted small">each</div>
+        </div>
+        <div class="card bg-white border-0 shadow-sm p-3 mb-3">
+          <div class="d-flex align-items-center mb-2">
+            <span class="badge bg-primary me-2">Best deal</span>
+            <span class="fw-bold">GA Standing</span>
+            <span class="ms-auto fw-bold">INR10,603</span>
+          </div>
+          <div class="small text-muted mb-1"><span class="listing-ticket-count">2 tickets</span></div>
+          <div class="mb-1"><i class="bi bi-eye"></i> Clear view</div>
+          <div class="mb-1"><i class="bi bi-person-x"></i> No under 14s</div>
+          <div class="mb-1"><i class="bi bi-person-standing"></i> Standing only</div>
+          <a href="Seat Selection.html" class="btn btn-danger w-100 fw-bold mb-2">Select Seats</a>
+          <div class="text-end text-muted small">each</div>
+        </div>
+      </div>
+    </div>
+    <!-- Booking Summary -->
+
+  </section>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var modal = new bootstrap.Modal(document.getElementById('ticketSelectModal'));
+      modal.show();
+      document.getElementById('continueBtn').addEventListener('click', function () {
+        modal.hide();
+      });
+    });
+  </script>
+
+</body>
+
+<!-- Minimalistic Footer -->
+<footer style="background:#f8f9fa; border-top:1px solid #e0e0e0;">
+  <div class="container py-4">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <div class="small text-muted">&copy; 2025 dingdong GmbH</div>
+      <div class="d-flex flex-wrap gap-3 small">
+        <a href="#" class="text-muted text-decoration-none">Company Details</a>
+        <a href="#" class="text-muted text-decoration-none">Terms</a>
+        <a href="#" class="text-muted text-decoration-none">Privacy</a>
+        <a href="#" class="text-muted text-decoration-none">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</html>

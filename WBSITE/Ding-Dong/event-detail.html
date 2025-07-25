@@ -1,0 +1,161 @@
+<!-- event-detail.html (Event Detail Page) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ding-Dong - Event Detail</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><span style="color:#7bb661;">ding</span><span
+          style="color:#222;">dong</span></a>
+      <ul class="navbar-nav me-auto ms-3">
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+
+      </ul>
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="my-tickets.html">My Tickets</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Sign In</a></li>
+        <li class="nav-item">
+          <img src="https://i.scdn.co/image/ab6761610000e5eb5ba2d75eb08a2d672f9b69b7" alt="Profile" class="rounded-circle d-inline-block"
+            style="width:32px;height:32px;object-fit:cover;border:2px solid #7bb661;">
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+    <section class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-6">
+          <div class="card border-0 shadow-sm p-4 text-center">
+            <img src="./img/arijit_singh_48-orig1630504921.png" class="img-fluid rounded-4 mb-4" alt="Concert" style="max-height:260px;object-fit:cover;">
+            <h2 class="fw-bold mb-2">Live Concert: Arijit Singh</h2>
+            <p class="text-muted mb-3">Experience the thrill of live music with Arijit Singh. One unforgettable night of soulful melodies and top hits.</p>
+            <div class="mb-3">
+              <span class="d-block mb-1"><i class="bi bi-calendar-event"></i> <strong>Date:</strong> 05 Sep 2025, 5:00 PM</span>
+              <span class="d-block"><i class="bi bi-geo-alt"></i> <strong>Venue:</strong> Tottenham Hotspur Stadium, London</span>
+            </div>
+            <a href="Selection Page.html" class="btn btn-success px-4 py-2 fw-bold">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Upcoming Events Section with Tabs -->
+    <section class="container my-5">
+      <ul class="nav nav-tabs mb-3" id="eventTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="sports-tab" data-bs-toggle="tab" data-bs-target="#sports" type="button" role="tab" aria-controls="sports" aria-selected="true">Sports</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tech-tab" data-bs-toggle="tab" data-bs-target="#tech" type="button" role="tab" aria-controls="tech" aria-selected="false">Tech Events</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="theater-tab" data-bs-toggle="tab" data-bs-target="#theater" type="button" role="tab" aria-controls="theater" aria-selected="false">Theater</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="eventTabsContent">
+        <!-- Sports Tab -->
+        <div class="tab-pane fade show active" id="sports" role="tabpanel" aria-labelledby="sports-tab">
+          <div class="event-list">
+            <div class="event-card d-flex align-items-center justify-content-between p-3 mb-3 rounded-3 border">
+              <div class="d-flex align-items-center">
+                <div class="date-box text-center me-3">
+                  <div class="date-month fw-bold">SEP</div>
+                  <div class="date-day fs-3 fw-bold">5</div>
+                  <div class="date-weekday text-success">FRI</div>
+                </div>
+                <div>
+                  <span class="me-2"><img src="https://flagcdn.com/gb.svg" width="24" alt="UK"></span>
+                  <span class="fw-bold">Tottenham Hotspur Stadium, London, United Kingdom</span><br>
+                  <span class="text-muted">5:00 PM | Arijit Singh</span>
+                </div>
+              </div>
+              <a href="Selection Page.html" class="btn btn-success">See Tickets</a>
+            </div>
+          </div>
+        </div>
+        <!-- Tech Events Tab -->
+        <div class="tab-pane fade" id="tech" role="tabpanel" aria-labelledby="tech-tab">
+          <div class="event-list">
+            <div class="event-card d-flex align-items-center justify-content-between p-3 mb-3 rounded-3 border">
+              <div class="d-flex align-items-center">
+                <div class="date-box text-center me-3">
+                  <div class="date-month fw-bold">OCT</div>
+                  <div class="date-day fs-3 fw-bold">12</div>
+                  <div class="date-weekday text-success">SUN</div>
+                </div>
+                <div>
+                  <span class="me-2"><img src="https://flagcdn.com/us.svg" width="24" alt="US"></span>
+                  <span class="fw-bold">Tech Hub, Silicon Valley, USA</span><br>
+                  <span class="text-muted">2:00 PM | Creative Workshop</span>
+                </div>
+              </div>
+              <a href="Selection Page.html" class="btn btn-success">See Tickets</a>
+            </div>
+            <div class="event-card d-flex align-items-center justify-content-between p-3 mb-3 rounded-3 border">
+              <div class="d-flex align-items-center">
+                <div class="date-box text-center me-3">
+                  <div class="date-month fw-bold">NOV</div>
+                  <div class="date-day fs-3 fw-bold">20</div>
+                  <div class="date-weekday text-success">THU</div>
+                </div>
+                <div>
+                  <span class="me-2"><img src="https://flagcdn.com/online.svg" width="24" alt="Online"></span>
+                  <span class="fw-bold">Online Webinar</span><br>
+                  <span class="text-muted">6:00 PM | Tech Webinar</span>
+                </div>
+              </div>
+              <a href="Selection Page.html" class="btn btn-success">See Tickets</a>
+            </div>
+          </div>
+        </div>
+        <!-- Theater Tab -->
+        <div class="tab-pane fade" id="theater" role="tabpanel" aria-labelledby="theater-tab">
+          <div class="event-list">
+            <div class="event-card d-flex align-items-center justify-content-between p-3 mb-3 rounded-3 border">
+              <div class="d-flex align-items-center">
+                <div class="date-box text-center me-3">
+                  <div class="date-month fw-bold">DEC</div>
+                  <div class="date-day fs-3 fw-bold">19</div>
+                  <div class="date-weekday text-success">FRI</div>
+                </div>
+                <div>
+                  <span class="me-2"><img src="https://flagcdn.com/ae.svg" width="24" alt="UAE"></span>
+                  <span class="fw-bold">Etihad Arena, Abu Dhabi, United Arab Emirates</span><br>
+                  <span class="text-muted">Arijit Singh (Rescheduled from 09 May 2025)</span>
+                </div>
+              </div>
+              <a href="Selection Page.html" class="btn btn-success">See Tickets</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  <!-- Minimalistic Footer -->
+  <footer style="background:#f8f9fa; border-top:1px solid #e0e0e0;">
+    <div class="container py-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <div class="small text-muted">&copy; 2025 dingdong GmbH</div>
+        <div class="d-flex flex-wrap gap-3 small">
+          <a href="#" class="text-muted text-decoration-none">Company Details</a>
+          <a href="#" class="text-muted text-decoration-none">Terms</a>
+          <a href="#" class="text-muted text-decoration-none">Privacy</a>
+          <a href="#" class="text-muted text-decoration-none">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
